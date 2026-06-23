@@ -19,16 +19,24 @@
         <header>
             <nav class="navbar">
                 <div class="navbar-container">
-                    <a href="#About" onclick="smoothScroll(event, 'About')">About</a>
-                    <a href="#Education" onclick="smoothScroll(event, 'Education')">Education</a>
-                    <a href="#TechStack" onclick="smoothScroll(event, 'TechStack')">Tech Stack</a>
-                    <a href="#InternshipExp" onclick="smoothScroll(event, 'InternshipExp')">Internship</a>
-                    <a href="#Project" onclick="smoothScroll(event, 'Project')">Project</a>
-                    <a href="#Resume" onclick="smoothScroll(event, 'Resume')">Resume</a>
-                    <a href="#Contact" onclick="smoothScroll(event, 'Contact')">Contact</a>
-                    <button class="theme-toggle" onclick="toggleTheme()" title="Toggle Dark/Light Mode">
-                        <i class="fa-solid fa-moon" id="theme-icon"></i>
+                    <a href="#Me" class="brand" onclick="smoothScroll(event, 'Me')" title="Mohini Kasar">MK</a>
+
+                    <button class="nav-toggle" id="navToggle" onclick="toggleNav()" aria-label="Toggle navigation">
+                        <i class="fa-solid fa-bars"></i>
                     </button>
+
+                    <div class="nav-links" id="navLinks">
+                        <a href="#About" onclick="smoothScroll(event, 'About')">About</a>
+                        <a href="#Education" onclick="smoothScroll(event, 'Education')">Education</a>
+                        <a href="#TechStack" onclick="smoothScroll(event, 'TechStack')">Tech Stack</a>
+                        <a href="#InternshipExp" onclick="smoothScroll(event, 'InternshipExp')">Internship</a>
+                        <a href="#Project" onclick="smoothScroll(event, 'Project')">Project</a>
+                        <a href="#Resume" onclick="smoothScroll(event, 'Resume')">Resume</a>
+                        <a href="#Contact" onclick="smoothScroll(event, 'Contact')">Contact</a>
+                        <button class="theme-toggle" onclick="toggleTheme()" title="Toggle Dark/Light Mode">
+                            <i class="fa-solid fa-moon" id="theme-icon"></i>
+                        </button>
+                    </div>
                 </div>
             </nav>
         </header>
@@ -38,7 +46,7 @@
             <!-- ── Hero ── -->
             <section id="Me">
                 <div id="image">
-                    <img src="Mohini_Kasar_img.jpeg" alt="Mohini Kasar">
+                    <img src="images\mohini_photo.png" alt="Mohini Kasar">
                 </div>
                 <div id="info">
                     <p class="hello">Hello, I'M </p>
@@ -475,10 +483,42 @@
         </main>
 
         <footer>
-            <div style="text-align:center; padding: 20px; color: #555; font-family: 'Poppins', sans-serif;">
-                © 2024 Mohini Kasar. All rights reserved.
+            <div class="footer-container">
+        
+                <div class="footer-top">
+                    <span class="footer-logo">MK</span>
+
+                   
+        
+                    <div class="footer-social-icons">
+                        <a href="https://www.linkedin.com/in/mohini-kasar/" target="_blank" rel="noopener" title="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/mohinikasar" target="_blank" rel="noopener" title="GitHub">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="mailto:mohinikasar44@gmail.com" title="Email">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                        <a href="https://wa.me/919730251344" target="_blank" rel="noopener" title="WhatsApp">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
+                    <a href="#Me" class="back-to-top-btn" onclick="smoothScroll(event, 'Me')" title="Back to Top">
+                        <!-- <i class="fa-solid fa-arrow-up"></i> -->
+                        <span>Back to Top</span>
+                    </a>
+                </div>
+        
+                <div class="footer-bottom">
+                    <p>© 2026 Mohini N Kasar</p>
+                    <p>Designed & Built with <i class="fa-solid fa-heart" style="color:#e57fa3;"></i> by Mohini Kasar</p>
+                </div>
+        
             </div>
         </footer>
+
+
 
         <script>
             function smoothScroll(e, id) {
@@ -502,6 +542,18 @@
                     }, 1500);
                 });
             }
+
+            // Mobile nav toggle
+            function toggleNav() {
+                document.getElementById('navLinks').classList.toggle('open');
+                document.getElementById('navToggle').classList.toggle('active');
+            }
+            document.querySelectorAll('#navLinks a').forEach(link => {
+                link.addEventListener('click', () => {
+                    document.getElementById('navLinks').classList.remove('open');
+                    document.getElementById('navToggle').classList.remove('active');
+                });
+            });
 
             // Dark / Light Mode
             function toggleTheme() {
@@ -528,534 +580,3 @@
 
     </body>
 </html>
-
-<!-- <html lang="en" class="light">
-    <head>
-        <title>Mohini | Full Stack Developer</title>
-    
-        <meta charset="UTF-8">
-    
-        <meta name="viewport"
-              content="width=device-width, initial-scale=1.0">
-    
-        <meta name="description"
-              content="Java Full Stack Developer Portfolio">
-    
-        <link rel="stylesheet" href="Style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-        <link rel="icon" href="favicon.png">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-        <meta http-equiv="refresh" content="3"> 
-    </head>
-    <header>
-        <nav class="navbar">
-            <div class="navbar-container">
-                <a href="#Refresh"></a>     
-                <a href="#About">About</a>
-                <a href="#Education">Education</a>
-                <a href="#TechStack">Tech Stack</a>
-                <a href="#InternshipExp">InternshipExp</a>
-                <a href="#Project">Project</a>
-                <a href="#Resume">Resume</a>
-                <a href="#Contact">Contact</a>   
-            </div>
-        </nav>
-    </header>
-    <body>
-        <main>
-
-            <section id="Me">
-                <div id="image">
-                    <img src="Mohini_Kasar_img.jpeg" alt="Mohini Kasar">
-                </div>
-                <div id="info">
-                    <p class="hello">Hello, I'M </p>
-                    <h1 class="name"> <span>Mohini Kasar</span></h1>
-                    <div class="designation"><span>Full Stack Developer</span></div>
-                    <div class="quote"><span >Passionate about building scalable web applications and solving real-world problems through clean and efficient code.</span></div>
-                </div>
-            
-            </section>
-
-            <section id="About">
-                
-                    <h2>About Me</h2>
-                    <p>I'm Mohini Kasar, a Software Engineer and Full Stack Developer passionate about transforming ideas into scalable and user-friendly applications. Skilled in Java, Spring Boot, .NET Core, React.js, and MySQL, I enjoy building robust backend systems, developing RESTful APIs, and creating seamless user experiences. With a strong foundation in software development and problem-solving, I am eager to contribute to innovative projects while continuously learning and growing in the technology field.</p>
-            </section>
-
-            <section id="Education">
-
-                <h2>Education</h2>
-            
-                <div class="edu-item">
-                    <div class="edu-left">
-                        <h3>PG Diploma in Advanced Computing (PG-DAC)</h3>
-                        <h4>CDAC Mumbai</h4>
-                    </div>
-            
-                    <div class="edu-right">
-                        <p>2025 – 2026</p>
-                        <span>60.25%</span>
-                    </div>
-                </div>
-            
-                <div class="edu-item">
-                    <div class="edu-left">
-                        <h3>Bachelor of Engineering (Computer Engineering)</h3>
-                        <h4>Savitribai Phule Pune University</h4>
-                    </div>
-            
-                    <div class="edu-right">
-                        <p>2019 – 2022</p>
-                        <span>81.20%</span>
-                    </div>
-                </div>
-            
-                <div class="edu-item">
-                    <div class="edu-left">
-                        <h3>Diploma in Computer Engineering</h3>
-                        <h4>MSBTE</h4>
-                    </div>
-            
-                    <div class="edu-right">
-                        <p>2017 – 2019</p>
-                        <span>66.67%</span>
-                    </div>
-                </div>
-            
-            </section>
-
-            <section id="TechStack">
-                <h2>Tech Stack</h2>
-                <p class="tech-desc">
-                    Technologies, frameworks, and tools I use to build scalable and impactful applications.
-                </p>
-            
-                <div class="tech-grid">
-            
-                    <div class="tech-card">
-                        <h3>Backend</h3>
-            
-                        <div class="skills">
-                            <span><i class="fa-brands fa-java"></i> Java</span>
-                            <span><i class="fa-solid fa-leaf"></i> Spring Boot</span>
-                            <span><i class="fa-brands fa-microsoft"></i> .NET Core</span>
-                            <span><i class="fa-solid fa-cloud"></i> REST APIs</span>
-                        </div>
-                    </div>
-            
-                    <div class="tech-card">
-                        <h3>Frontend</h3>
-            
-                        <div class="skills">
-                            <span><i class="fa-brands fa-html5"></i> HTML5</span>
-                            <span><i class="fa-brands fa-css3-alt"></i> CSS3</span>
-                            <span><i class="fa-brands fa-js"></i> JavaScript</span>
-                            <span><i class="fa-brands fa-react"></i> React.js</span>
-                        </div>
-                    </div>
-            
-                    <div class="tech-card">
-                        <h3>Database</h3>
-            
-                        <div class="skills">
-                            <span><i class="fa-solid fa-database"></i> MySQL</span>
-                            <span><i class="fa-solid fa-server"></i> JDBC</span>
-                            <span><i class="fa-solid fa-table"></i> SQL</span>
-                        </div>
-                    </div>
-            
-                    <div class="tech-card">
-                        <h3>DevOps & Tools</h3>
-            
-                        <div class="skills">
-                            <span><i class="fa-brands fa-git-alt"></i> Git</span>
-                            <span><i class="fa-brands fa-github"></i> GitHub</span>
-                            <span><i class="fa-brands fa-jenkins"></i> Jenkins</span>
-                            <span><i class="fa-solid fa-paper-plane"></i> Postman</span>
-                            <span><i class="fa-solid fa-code"></i> VS Code</span>
-                        </div>
-                    </div>
-            
-                </div>
-            
-            </section>
-            
-           
-            <section id="InternshipExp">
-
-                <h2>Internship Experience</h2>
-
-                <div class="internship-card">
-
-                    <h3>Software Developer Intern</h3>
-
-                    <h4>Penta Designers & Engineers Pvt. Ltd.</h4>
-
-                    <p id="duration">Nov 2023 – Jun 2024</p>
-
-                    <h4>Overview</h4>
-
-                    <p class="overview">
-                        Contributed to the development and maintenance of enterprise web applications using .NET Core, C#, MySQL, and Radzen Blazor. Designed and implemented RESTful APIs, optimized database queries, and developed interactive user interfaces. Worked closely with development teams to deliver scalable, high-performance, and user-centric software solutions while following industry best practices.
-                    </p>
-
-                    <h4>Key Responsibilities</h4>
-
-                    <ul>
-                        <li>Developed and maintained backend components using .NET Core and C#.</li>
-                        <li>Designed and implemented RESTful APIs for seamless frontend-backend communication.</li>
-                        <li>Built and customized UI components using Radzen Blazor.</li>
-                        <li>Optimized MySQL queries and backend logic to improve application performance.</li>
-                        <li>Debugged and resolved technical issues, improving system stability.</li>
-                        <li>Collaborated with cross-functional teams to deliver scalable software features.</li>
-                        <li>Participated in code reviews and followed coding standards and best practices.</li>
-                    </ul>
-
-                    <h4>Technologies Used</h4>
-
-                    <div class="tech-used">
-
-                        <a class="tech-logo-item" href="https://www.google.com/search?q=.NET+Core+Microsoft" target="_blank" rel="noopener">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg" alt=".NET Core">
-                            
-                        </a>
-
-                        <a class="tech-logo-item" href="https://www.google.com/search?q=C+sharp+programming+language" target="_blank" rel="noopener">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#">
-                            
-                        </a>
-
-                        <a class="tech-logo-item" href="https://www.google.com/search?q=MySQL+database" target="_blank" rel="noopener">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
-                            
-                        </a>
-
-                        <a class="tech-logo-item" href="https://www.google.com/search?q=Radzen+Blazor+UI+components" target="_blank" rel="noopener">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blazor/blazor-original.svg" alt="Radzen Blazor">
-                            
-                        </a>
-
-                        <a class="tech-logo-item" href="https://www.google.com/search?q=REST+API" target="_blank" rel="noopener">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="REST APIs">
-                            
-                        </a>
-
-                        <a class="tech-logo-item" href="https://www.google.com/search?q=Git+version+control" target="_blank" rel="noopener">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
-                            
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </section>
-
-            <section id="Project">
-
-                <h2>PG-DAC Final Project</h2>
-            
-                <div class="project-card">
-            
-                    <div class="project-header">
-            
-                        <div>
-                            <h3>Innovate Connect – Internship Selection Platform</h3>
-                            <p id="duration">Nov 2025 – Jan 2026</p>
-                        </div>
-            
-                        <div class="github-link">
-                            <a href="https://github.com/mohinikasar-cmaug25/PG-DAC-Final-Project" target="_blank">
-                                <i class="fa-brands fa-github"></i>
-                                View GitHub
-                            </a>
-                        </div>
-            
-                    </div>
-            
-                    <h4>Overview</h4>
-            
-                    <p class="overview">
-                        Innovate Connect is a full-stack web platform designed to bridge the gap between students and companies by streamlining the internship application and selection process. The platform enables students to explore opportunities, apply for internships, and track application status, while companies can post internships and manage candidate applications through a centralized system.
-                    </p>
-            
-                    <h4>Key Features</h4>
-            
-                    <ul>
-                        <li>Developed a full-stack internship management platform for students and recruiters.</li>
-                        <li>Implemented secure user authentication and role-based access control.</li>
-                        <li>Built RESTful APIs using Spring Boot for efficient data management.</li>
-                        <li>Designed and integrated MySQL database with optimized queries.</li>
-                        <li>Developed responsive and user-friendly interfaces using React.js.</li>
-                        <li>Managed version control and collaborative development using Git.</li>
-                        <li>Applied layered architecture principles to ensure scalability and maintainability.</li>
-                    </ul>
-            
-                    <h4>Technologies Used</h4>
-            
-                    <div class="project-tech-logos">
-            
-                        <a class="tech-logo-item" href="https://www.google.com/search?q=Java+programming+official+tutorial" target="_blank" rel="noopener">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
-                            
-                        </a>
-            
-                        <a class="tech-logo-item" href="https://www.google.com/search?q=Spring+Boot+official+tutorial" target="_blank" rel="noopener">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring Boot">
-                            
-                        </a>
-            
-                        <a class="tech-logo-item" href="https://www.google.com/search?q=MySQL+official+tutorial" target="_blank" rel="noopener">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
-                            
-                        </a>
-            
-                        <a class="tech-logo-item" href="https://www.google.com/search?q=REST+API+tutorial" target="_blank" rel="noopener">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="REST APIs">
-                            
-                        </a>
-            
-                        <a class="tech-logo-item" href="https://www.google.com/search?q=Git+official+tutorial" target="_blank" rel="noopener">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
-                           
-                        </a>
-            
-                        <a class="tech-logo-item" href="https://www.google.com/search?q=HTML5+official+tutorial" target="_blank" rel="noopener">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
-                            
-                        </a>
-            
-                        <a class="tech-logo-item" href="https://www.google.com/search?q=CSS3+official+tutorial" target="_blank" rel="noopener">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
-                            
-                        </a>
-            
-                        <a class="tech-logo-item" href="https://www.google.com/search?q=JavaScript+official+tutorial" target="_blank" rel="noopener">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
-                            
-                        </a>
-
-                        <a class="tech-logo-item" href="https://www.google.com/search?q=React.js+official+tutorial" target="_blank" rel="noopener">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React.js">
-                            
-                        </a>
-            
-            
-                    </div>
-            
-                    <h4>Impact</h4>
-            
-                    <ul>
-                        <li>Improved internship application management through a centralized platform.</li>
-                        <li>Managed and processed 100+ user records efficiently.</li>
-                        <li>Enhanced data processing efficiency through optimized backend services.</li>
-                    </ul>
-            
-                </div>
-            
-            </section>
-
-            
-            <section id="Resume">
-
-                <h2>Resume</h2>
-            
-                <div class="resume-card">
-            
-                    <div class="resume-content">
-            
-                        <div class="resume-animation">
-            
-                            <div class="folder">
-                                <div class="folder-back"></div>
-                                <div class="folder-front">
-                                    <div class="folder-lines">
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </div>
-                                </div>
-                                <div class="doc doc1">
-                                    <div class="doc-lines">
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </div>
-                                </div>
-                                <div class="doc doc2">
-                                    <div class="doc-lines">
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </div>
-                                </div>
-                                <div class="sparkle s1">✦</div>
-                                <div class="sparkle s2">✦</div>
-                                <div class="sparkle s3">✦</div>
-                            </div>
-            
-                        </div>
-            
-                        <div class="resume-info">
-                            
-                            <p class="resume-desc">
-                                My resume covers my experience, skills, and projects in full-stack development.
-                                Click below to view or download a copy.
-                            </p>
-            
-                            <div class="resume-buttons">
-            
-                                <a class="resume-btn view-btn"
-                                   href="https://drive.google.com/file/d/1vc3W237UsHSXTcegqqsM4WmzrXltfiCs/view"
-                                   target="_blank" rel="noopener">
-                                    <i class="fa-regular fa-eye"></i>
-                                    View Resume
-                                </a>
-            
-                                <a class="resume-btn download-btn"
-                                   href="https://drive.google.com/uc?export=download&id=1vc3W237UsHSXTcegqqsM4WmzrXltfiCs"
-                                   target="_blank" rel="noopener">
-                                    <i class="fa-solid fa-download"></i>
-                                    Download Resume
-                                </a>
-            
-                            </div>
-                        </div>
-            
-                    </div>
-            
-                </div>
-            
-            </section>
-
-            <section id="Contact">
-
-                <h2>Get In Touch</h2>
-
-                <div class="contact-card">
-
-                    <div class="contact-glow"></div>
-                    <div class="contact-shine"></div>
-
-                    <div class="card-top">
-                        <div class="status-badge">
-                            <span class="status-dot"></span>
-                            Available for opportunities
-                        </div>
-                    </div>
-
-                    <p class="contact-intro">
-                        I'm always open to discussing new opportunities, collaborations, or just a friendly chat about tech. Feel free to reach out!
-                    </p>
-
-                    <div class="contact-grid">
-
-                        <button class="contact-item" data-copy="mohinikasar44@gmail.com" onclick="copyContact(this)">
-                            <div class="contact-icon">
-                                <i class="fa-solid fa-envelope"></i>
-                            </div>
-                            <div class="contact-text">
-                                <span class="contact-label">Email</span>
-                                <span class="contact-value">mohinikasar44@gmail.com</span>
-                            </div>
-                            <i class="fa-regular fa-copy copy-icon"></i>
-                        </button>
-
-                        <button class="contact-item" data-copy="+91 97302 51344" onclick="copyContact(this)">
-                            <div class="contact-icon">
-                                <i class="fa-solid fa-phone"></i>
-                            </div>
-                            <div class="contact-text">
-                                <span class="contact-label">Phone</span>
-                                <span class="contact-value">+91 97302 51344</span>
-                            </div>
-                            <i class="fa-regular fa-copy copy-icon"></i>
-                        </button>
-
-                        <div class="contact-item no-hover">
-                            <div class="contact-icon">
-                                <i class="fa-solid fa-location-dot"></i>
-                            </div>
-                            <div class="contact-text">
-                                <span class="contact-label">Location</span>
-                                <span class="contact-value">Pune, Maharashtra, India</span>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    
-                    <div class="availability-row">
-                        <div class="avail-badge">
-                            <i class="fa-solid fa-map-location-dot"></i>
-                            Currently in Pune, MH
-                        </div>
-                        <div class="avail-badge">
-                            <i class="fa-solid fa-truck-moving"></i>
-                            Open to Relocation
-                        </div>
-                        <div class="avail-badge">
-                            <i class="fa-solid fa-laptop-house"></i>
-                            Remote Friendly
-                        </div>
-                    </div>
-
-                    <div class="contact-socials">
-
-                        <a class="social-btn linkedin" href="https://www.linkedin.com/in/mohini-kasar/" target="_blank" rel="noopener" title="LinkedIn">
-                            <i class="fa-brands fa-linkedin-in"></i>
-                        </a>
-
-                        <a class="social-btn github" href="https://github.com/mohinikasar" target="_blank" rel="noopener" title="GitHub">
-                            <i class="fa-brands fa-github"></i>
-                        </a>
-
-                        <a class="social-btn email-btn" href="mailto:mohinikasar44@gmail.com" title="Say Hello">
-                            <i class="fa-solid fa-paper-plane"></i>
-                        </a>
-
-                        <a class="social-btn whatsapp-btn" href="https://wa.me/919730251344" target="_blank" rel="noopener" title="WhatsApp">
-                            <i class="fa-brands fa-whatsapp"></i>
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </section>
-
-            <script>
-            function copyContact(el) {
-                const value = el.getAttribute('data-copy');
-                navigator.clipboard.writeText(value).then(() => {
-                    const icon = el.querySelector('.copy-icon');
-                    const original = icon.className;
-                    icon.className = 'fa-solid fa-check copy-icon copied';
-                    el.classList.add('just-copied');
-                    setTimeout(() => {
-                        icon.className = original;
-                        el.classList.remove('just-copied');
-                    }, 1500);
-                });
-            }
-            </script>
-
-        </main>
-            
-            
-     </body> 
-     <footer>
-        <div style="background-color: white;">Hello</div>
-     </footer>
-           
-     
-    
-</html> -->
