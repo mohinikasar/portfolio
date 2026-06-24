@@ -270,7 +270,7 @@ section h2 {
     text-align: justify;
     width: 630px;
     padding-left: 55px;
-    padding-top: 15px;
+    padding-top: 40px;
     font-size: large;
 }
 
@@ -291,7 +291,7 @@ section h2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 0;
+    padding: 40px 0;
     font-size: large;
     border-bottom: 1px solid rgba(61, 60, 60, 0.15);
 }
@@ -316,8 +316,9 @@ section h2 {
 }
 
 .edu-right span {
-    color: #1578f1;
-    font-weight: normal;
+    
+    font-weight: 400;
+    font-size: large;
 }
 
 /* ── Tech Stack ── */
@@ -330,16 +331,15 @@ section h2 {
 
 #TechStack p {
     width: 630px;
-    padding-left: 55px;
-    padding-top: 15px;
-    font-size: medium;
+    padding-left:55px;
+    padding-top:40px;
+    font-size:large;
+    padding-left:55px;
+    font-size:18px;
+     margin-bottom: 45px;
+    
 }
 
-.tech-desc {
-    font-size: 16px;
-    color: #0a0a0a;
-    margin-bottom: 45px;
-}
 
 .tech-grid {
     display: grid;
@@ -447,7 +447,7 @@ section h2 {
 }
 
 #duration {
-    color: #3e3f41;
+    /* color: #3e3f41; */
     font-size: 15px;
 }
 
@@ -548,10 +548,7 @@ section h2 {
     margin-bottom: 8px;
 }
 
-#duration {
-    color: #3e3f41;
-    font-size: 15px;
-}
+
 
 .project-card h4 {
     margin-top: 25px;
